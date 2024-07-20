@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="theme-toggle">
+            <button id="theme-btn">Toggle Theme</button>
+        </div>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="deleteLast()">DEL</button>
+            <button class="btn" onclick="appendSymbol('%')">%</button>
+            <button class="btn operator" onclick="appendSymbol('/')">÷</button>
+            <button class="btn" onclick="appendSymbol('7')">7</button>
+            <button class="btn" onclick="appendSymbol('8')">8</button>
+            <button class="btn" onclick="appendSymbol('9')">9</button>
+            <button class="btn operator" onclick="appendSymbol('*')">×</button>
+            <button class="btn" onclick="appendSymbol('4')">4</button>
+            <button class="btn" onclick="appendSymbol('5')">5</button>
+            <button class="btn" onclick="appendSymbol('6')">6</button>
+            <button class="btn operator" onclick="appendSymbol('-')">-</button>
+            <button class="btn" onclick="appendSymbol('1')">1</button>
+            <button class="btn" onclick="appendSymbol('2')">2</button>
+            <button class="btn" onclick="appendSymbol('3')">3</button>
+            <button class="btn operator" onclick="appendSymbol('+')">+</button>
+            <button class="btn" onclick="appendSymbol('0')">0</button>
+            <button class="btn" onclick="appendSymbol('.')">.</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+            <button class="btn" id="extra-menu-toggle">More</button>
+        </div>
+        <div class="extra-menu" id="extra-menu">
+            <button class="btn" onclick="appendSymbol('Math.sqrt(')">√</button>
+            <button class="btn" onclick="appendSymbol('Math.pow(')">x^y</button>
+            <button class="btn" onclick="appendSymbol('Math.sin(')">sin</button>
+            <button class="btn" onclick="appendSymbol('Math.cos(')">cos</button>
+            <button class="btn" onclick="appendSymbol('Math.tan(')">tan</button>
+            <button class="btn" onclick="appendSymbol('Math.log(')">log</button>
+            <button class="btn" onclick="appendSymbol('Math.exp(')">exp</button>
+            <button class="btn" onclick="appendSymbol('Math.PI')">π</button>
+            <button class="btn" onclick="appendSymbol('Math.E')">e</button>
+            <button class="btn" id="extra-menu-close">Close</button>
+        </div>
+        <div class="history">
+            <h3>History</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
